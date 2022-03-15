@@ -1,0 +1,48 @@
+.left {
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+
+    padding: 10px;
+    text-align: left;
+    background: #c3e0e7;
+    color: rgb(14, 2, 2);
+    font-size: 20px;
+  }
+  
+
+  .cities-list {
+    position:absolute;
+    resize: both;
+    width: 20%;
+    height: 57%;
+    padding: 0;
+    top: -20px;
+    right: 90px;
+    left:-20px;
+    list-style-type:upper-latin;
+    border-bottom: 0px solid #3b2727;
+    border-right: 1px solid #3b2727;
+    text-decoration:underline;
+    
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: left;
+      font-size: 32px;
+      color: #ffffff;
+      width: 5%;
+      min-height: 20px;
+      
+      transition: color .1s ease-out;
+      cursor:crosshair;
+   
+      &:hover {
+        color: #c50cf3;
+      }
+    }
+  }

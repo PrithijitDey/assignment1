@@ -4,17 +4,17 @@
     <div class="update">          <!--the weather report-->
         <ul>
     
-          <h4 class="one"> CONDITION:   SUNNY</h4> 
+          <h4 class="one"> CONDITION:   {{newyorkforecast.condition}}</h4> 
       
             
-          <h4 class="one"> Temperature:-   </h4>  
+          <h4> Temperature:-   </h4>  
           
-          <p class="two"> Day:-        24 </p>               
-          <p class="two"> Night:       20 </p> 
+          <p class="two"> Day:-       {{newyorkforecast.temperature.day}}  </p>               
+          <p class="two"> Night:       {{newyorkforecast.temperature.night}} </p> 
           <br>           
           <h4>WIND</h4> 
-          <p class="two"> Speed:  02MPS</p>
-              <p class="three">Direction:-  SOUTH</p>
+          <p class="two"> Speed:  {{newyorkforecast.wind.speed}}</p>
+              <p class="three">Direction:-  {{newyorkforecast.wind.direction}}</p>
               
                 <br>
                  </ul>

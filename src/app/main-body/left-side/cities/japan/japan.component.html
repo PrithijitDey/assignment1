@@ -7,17 +7,17 @@
 <div class="update">               <!--the weather report-->
     <ul>
 
-      <h4 class="one"> CONDITION:   CLOUDY</h4> 
+        <h4 class="one"> CONDITION:   {{japanforecast.condition}}</h4> 
       
             
-      <h4 class="one"> Temperature:-   </h4>  
-      
-      <p class="two"> Day:-        22 </p>               
-      <p class="two"> Night:       18 </p> 
-      <br>           
-      <h4>WIND</h4> 
-      <p class="two"> Speed:  1.5MPS</p>
-          <p class="three">Direction:-  SOUTH</p>
+        <h4> Temperature:-   </h4>  
+        
+        <p class="two"> Day:-       {{japanforecast.temperature.day}}  </p>               
+        <p class="two"> Night:       {{japanforecast.temperature.night}} </p> 
+        <br>           
+        <h4>WIND</h4> 
+        <p class="two"> Speed:  {{japanforecast.wind.speed}}</p>
+            <p class="three">Direction:-  {{japanforecast.wind.direction}}</p>
           
     <br>
 

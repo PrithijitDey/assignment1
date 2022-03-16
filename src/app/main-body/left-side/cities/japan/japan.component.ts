@@ -7,7 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JapanComponent implements OnInit {
 
-  constructor() { }
+   japanforecast = {
+    condition : "CLOUDY",
+    temperature : {
+      day : 22,
+      night : 18
+    },
+    wind : {
+      speed : 1.5,
+      direction : "SOUTH"
+    }
+  };
+
+
+  constructor() {
+    
+   }
+
+  
 
   ngOnInit(): void {
   }

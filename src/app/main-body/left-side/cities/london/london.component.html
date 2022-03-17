@@ -3,18 +3,20 @@
 
     <div class="update">    <!--the weather report-->
         <ul>
-    
-          <h4 class="one"> CONDITION:   {{londonforecast.condition}}</h4> 
+            <h3> {{ date | date }}</h3>
+          <h4 class="one"> CONDITION:   {{forecastdata.condition}}</h4> 
       
             
           <h4> Temperature:-   </h4>  
           
-          <p class="two"> Day:-       {{londonforecast.temperature.day}}  </p>               
-          <p class="two"> Night:       {{londonforecast.temperature.night}} </p> 
+          <p class="three"> Day:-       {{forecastdata.temperature.day }}*C   </p>
+          <p class="two">  "           {{forecastdata.temperature.day | demo}}   </p>            
+          <p class="four"> Night:       {{forecastdata.temperature.night}}*C </p> 
+          <p class="two">  "           {{forecastdata.temperature.night | demo}}   </p>
           <br>           
           <h4>WIND</h4> 
-          <p class="two"> Speed:  {{londonforecast.wind.speed}}</p>
-              <p class="three">Direction:-  {{londonforecast.wind.direction}}</p>
+          <p class="two"> Speed:  {{forecastdata.wind.speed}}</p>
+              <p class="three">Direction:-  {{forecastdata.wind.direction}}</p>
               
                 <br>
     

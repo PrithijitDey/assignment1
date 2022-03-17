@@ -1,29 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-
+import { weatherinfoservice } from 'src/app/cityInfoService';
+import { DemoPipe } from '../../../../file.pipe';
 @Component({
   selector: 'app-london',
   templateUrl: './london.component.html',
   styleUrls: ['./london.component.scss']
 })
 export class LondonComponent implements OnInit {
+  date = new Date(2022, 2, 17);
+  forecastdata:any;
+  constructor(private service: weatherinfoservice) {
+    this.service = service;
 
-  londonforecast = {
-    condition : "SUNNY",
-	temperature : {
-		day : 26,
-		night : 15
-	},
-	wind : {
-		speed : 1,
-		direction : "SOUTH"
-    }
-  };
-  
-
-  constructor() { }
-
+   }
   ngOnInit(): void {
-    (this.londonforecast);
+    this.forecastdata = this.service.getlondonweather();
+
   }
 
 }

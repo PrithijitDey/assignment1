@@ -6,18 +6,20 @@
 
 <div class="update">               <!--the weather report-->
     <ul>
-
-        <h4 class="one"> CONDITION:   {{japanforecast.condition}}</h4> 
+        <h3> {{ date | date }}</h3>
+        <h4 class="one"> CONDITION:   {{forecastdata.condition}}</h4> 
       
             
         <h4> Temperature:-   </h4>  
         
-        <p class="two"> Day:-       {{japanforecast.temperature.day}}  </p>               
-        <p class="two"> Night:       {{japanforecast.temperature.night}} </p> 
+        <p class="three"> Day:-       {{forecastdata.temperature.day}}*C  </p>  
+        <p class="two">  "           {{forecastdata.temperature.day | demo}}   </p> 
+        <p class="four"> Night:       {{forecastdata.temperature.night}}*C </p> 
+        <p class="two">  "           {{forecastdata.temperature.night | demo}}   </p>
         <br>           
         <h4>WIND</h4> 
-        <p class="two"> Speed:  {{japanforecast.wind.speed}}</p>
-            <p class="three">Direction:-  {{japanforecast.wind.direction}}</p>
+        <p class="two"> Speed:  {{forecastdata.wind.speed}}</p>
+            <p class="three">Direction:-  {{forecastdata.wind.direction}}</p>
           
     <br>
 

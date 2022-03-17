@@ -12,6 +12,7 @@ import { NewyorkComponent } from './main-body/left-side/cities/newyork/newyork.c
 import { LondonComponent } from './main-body/left-side/cities/london/london.component';
 import { JapanComponent } from './main-body/left-side/cities/japan/japan.component';
 import { RightSideComponent } from './main-body/right-side/right-side.component';
+import { DemoPipe } from './file.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RightSideComponent } from './main-body/right-side/right-side.component'
     NewyorkComponent,
     LondonComponent,
     JapanComponent,
-    RightSideComponent
+    RightSideComponent,
+    DemoPipe
   ],
   imports: [
     BrowserModule,

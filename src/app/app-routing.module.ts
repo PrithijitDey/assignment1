@@ -6,9 +6,9 @@ import { LondonComponent } from './main-body/left-side/cities/london/london.comp
 import { NewyorkComponent } from './main-body/left-side/cities/newyork/newyork.component';
 
 const routes: Routes = [
-  { path: 'city-newyork', component: NewyorkComponent  },
-  { path: 'city-london', component: LondonComponent },
-  { path: 'city-japan', component: JapanComponent },
+  { path: 'City-Newyork', component: NewyorkComponent  },
+  { path: 'City-London', component: LondonComponent },
+  { path: 'City-Japan', component: JapanComponent },
 ];
 
 @NgModule({

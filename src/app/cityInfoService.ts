@@ -13,7 +13,7 @@ export class  WeatherInfoService {
         
     constructor() { }
         
-    GetLondonWeather()
+    getLondonWeather()
     {
          return  { condition : "SUNNY", 
              temperature : {
@@ -28,7 +28,7 @@ export class  WeatherInfoService {
             },
          };
     }
-    GetNewyorkWeather()
+    getNewyorkWeather()
     {
       return {  condition : "SUNNY",
 	            temperature : {
@@ -43,7 +43,7 @@ export class  WeatherInfoService {
 
     }
 
-    GetJapanWeather(){
+    getJapanWeather(){
 
        return{ condition : "CLOUDY",
                 temperature : {

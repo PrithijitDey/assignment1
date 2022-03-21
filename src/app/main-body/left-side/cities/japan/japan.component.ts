@@ -19,7 +19,7 @@ export class JapanComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.forecastdata = this.service.GetJapanWeather();
+    this.forecastdata = this.service.getJapanWeather();
   }
 
 }

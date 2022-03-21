@@ -14,7 +14,7 @@ export class LondonComponent implements OnInit {
 
    }
   ngOnInit(): void {
-    this.forecastdata = this.service.GetLondonWeather();
+    this.forecastdata = this.service.getLondonWeather();
 
   }
 

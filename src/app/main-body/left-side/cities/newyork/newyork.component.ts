@@ -18,7 +18,7 @@ export class NewyorkComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.forecastdata = this.service.GetNewyorkWeather();
+    this.forecastdata = this.service.getNewyorkWeather();
   }
 
 }

@@ -1,31 +1,36 @@
 .left {
     position:absolute;
-    width: 20px;
-    height: 20px;
+    width: 0px;
+    height: 0px;
     top: 0px;
     right: 0px;
     left: 0px;
 
-    padding: 10px;
+    padding: 0px;
     text-align: left;
     background: #ffffff;
     color: rgb(14, 2, 2);
     font-size: 20px;
   }
   
+  .box {outline-style: solid;
+  height: 70px;
+  width: 304px;
+color: #5eb8f5;}
 
   .cities-list {
     position:absolute;
     resize: both;
     width: 20%;
-    height: 57%;
+    height: 56%;
     padding: 0;
-    top: -20px;
+    top: -38px;
     right: 90px;
     left:-20px;
     list-style-type:upper-latin;
     border-bottom: 0px solid #3b2727;
-    border-right: 1px solid #3b2727;
+    border-right: 4px solid #87cef7;
+    
     
     
 

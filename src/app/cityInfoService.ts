@@ -46,16 +46,7 @@ export class  WeatherInfoService {
 		            speed : 0,
 		            direction : "NORTH"
                     },
-                     DailyTable:[
-                        {day: 'MON', morning: 8, night: 18},
-                        {day: 'TUE', morning: 9, night: 19},
-                        {day: 'WED', morning: 10, night: 20},
-                        {day: 'THU', morning: 11, night: 21},
-                        {day: 'FRI', morning: 12, night: 22},
-                        {day: 'SAT', morning: 13, night: 23},
-                        {day: 'SUN', morning: 14, night: 24},
-                        
-                      ]
+                     
 
         };
 
@@ -73,16 +64,7 @@ export class  WeatherInfoService {
                         speed : 0,
                         direction : "SOUTH"
                      },
-                     DailyTable: [
-                        {day: 'MON', morning: 15, night: 25},
-                        {day: 'TUE', morning: 16, night: 26},
-                        {day: 'WED', morning: 17, night: 27},
-                        {day: 'THU', morning: 18, night: 28},
-                        {day: 'FRI', morning: 19, night: 29},
-                        {day: 'SAT', morning: 20, night: 30},
-                        {day: 'SUN', morning: 21, night: 31},
-                        
-                      ]
+                    
                 };
                
      }

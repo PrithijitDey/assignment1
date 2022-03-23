@@ -11,15 +11,11 @@ export class JapanComponent implements OnInit {
   forecastdata:any;
   constructor(private service: WeatherInfoService) {
     this.service = service;
-
-   }
     
-   
-
-  
-
+   }
   ngOnInit(): void {
     this.forecastdata = this.service.getJapanWeather();
+    
   }
 
 }

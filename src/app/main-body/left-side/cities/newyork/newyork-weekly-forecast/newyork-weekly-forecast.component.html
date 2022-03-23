@@ -1,0 +1,26 @@
+<h4 class="header">IN NEW YORK THIS WEEK</h4>
+<table class="tab" mat-table [dataSource]="dailyTable">
+    
+
+    <ng-container matColumnDef="day">
+        
+        <th class="mathead" mat-header-cell *matHeaderCellDef>| DAY |</th>
+        <td mat-cell *matCellDef="let weekly"> {{weekly.day}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+    
+    
+    <ng-container matColumnDef="morning">
+        
+        <th class="mathead" mat-header-cell *matHeaderCellDef> | MORNING |</th>
+        <td mat-cell *matCellDef="let weekly"> {{weekly.morning}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="night">
+        
+        <th class="mathead" mat-header-cell *matHeaderCellDef>| NIGHT |</th>
+        <td mat-cell *matCellDef="let weekly"> {{weekly.night}} </td>
+      </ng-container>
+    
+    </table>

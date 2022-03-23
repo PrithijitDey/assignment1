@@ -13,6 +13,13 @@ import { LondonComponent } from './main-body/left-side/cities/london/london.comp
 import { JapanComponent } from './main-body/left-side/cities/japan/japan.component';
 import { RightSideComponent } from './main-body/right-side/right-side.component';
 import { DemoPipe } from './file.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JapanWeeklyForecastComponent } from './main-body/left-side/cities/japan/japan-weekly-forecast/japan-weekly-forecast.component';
+import { NewyorkWeeklyForecastComponent } from './main-body/left-side/cities/newyork/newyork-weekly-forecast/newyork-weekly-forecast.component';
+import { LondonWeeklyForecastComponent } from './main-body/left-side/cities/london/london-weekly-forecast/london-weekly-forecast.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [
@@ -26,11 +33,19 @@ import { DemoPipe } from './file.pipe';
     LondonComponent,
     JapanComponent,
     RightSideComponent,
-    DemoPipe
+    DemoPipe,
+    JapanWeeklyForecastComponent,
+    NewyorkWeeklyForecastComponent,
+    LondonWeeklyForecastComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatSortModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

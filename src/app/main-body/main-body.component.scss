@@ -1,12 +1,16 @@
 .main {
-    position: fixed;
-    top: 70px;
+    position: absolute;
+    top: 90px;
     right: 0px;
     left: 0px;
-
-    padding: 310px;
+    bottom: 0px;
+    
+    
+    align-content: center;
+    padding-left: 180px;
     text-align:center;
     background: #ffffff;
-    color: rgb(204, 111, 111);
-    font-size: 20px;
+    
+    
+    
   }

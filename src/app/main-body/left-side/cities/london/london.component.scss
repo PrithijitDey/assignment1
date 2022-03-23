@@ -3,11 +3,13 @@
     position: relative;
     padding: 0px;
     text-align:center;
-    top: -300px;
+    top: 0px;
     position: center;
     background:  #ffffff;
     color: rgb(14, 2, 2);
     font-size: 20px;
+    width: 60%;
+    
   }
 
   .one{
@@ -22,6 +24,13 @@
   }
   .four{
     word-spacing: 560px;
+  }
+  .box {outline-style: solid;
+    outline-width: 0.5px;
+  height: 60px;
+  width: 220px;
+  list-style-type:none;
+  text-align: center;
   }
   .update{
     position: relative;

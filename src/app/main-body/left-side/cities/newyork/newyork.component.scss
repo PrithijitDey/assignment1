@@ -2,14 +2,16 @@
     position: relative;
     padding: 0px;
     text-align:center;
-    top: -300px;
+    top: 0px;
+    bottom: 200px;
     position: center;
     background:  #ffffff;
     color: rgb(14, 2, 2);
     font-size: 20px;
+    width: 60%;
   }
 .one{
-  word-spacing: 500px;
+  word-spacing: 520px;
 }
 
 .two{
@@ -17,19 +19,28 @@
 }
 
 .three{
-  word-spacing: 555px;
+  word-spacing: 525px;
 }
 .four{
   word-spacing: 560px;
 }
+.box {outline-style: solid;
+  outline-width: 0.5px;
+height: 60px;
+width: 220px;
+list-style-type:none;
+text-align: center;
+}
   .update{
     position: relative;
     
+    top:0px;
     text-align: left;
     position: center;
     background:  #ffffff;
     color: rgb(14, 2, 2);
     font-size: 20px;
+    
   }
 
  

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-london-weekly-forecast',
   templateUrl: './london-weekly-forecast.component.html',
@@ -22,6 +23,7 @@ export class LondonWeeklyForecastComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -19,7 +19,7 @@ import { NewyorkWeeklyForecastComponent } from './main-body/left-side/cities/new
 import { LondonWeeklyForecastComponent } from './main-body/left-side/cities/london/london-weekly-forecast/london-weekly-forecast.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +45,8 @@ import { MatSortModule } from '@angular/material/sort';
     BrowserAnimationsModule,
     MatTableModule,
     MatSortModule,
+    HttpClientModule,
+    
   
   ],
   providers: [],

@@ -1,9 +1,21 @@
 
  import { Injectable } from '@angular/core';
- import {MatTableModule} from '@angular/material/table';
+ 
 
-    
+ import { HttpClient, HttpHeaders } from '@angular/common/http';
   
+ export interface WeatherForecastInterface
+ {
+   id:string;
+   condition : string; 
+   temperature : any;
+   day : number;
+   night : number;
+   wind : any;
+   speed : number;
+   direction : string;
+                             }
+ 
 
  @Injectable
  ({
@@ -14,60 +26,16 @@
   
 export class  WeatherInfoService {
    
+   private weatherforecastUrl = 'http://localhost:3000/weatherforecast'; 
+    constructor(private http:HttpClient) { }
         
-    constructor() { }
-        
-    getLondonWeather()
-    {
-         return  { condition : "SUNNY", 
-             temperature : {
-                day : 26,
-                
-                night : 15
-             },
-             wind : {
-                speed : 0,
-                 direction : "SOUTH"
-        
-            },
-             
-            
-         };
-         
-    }
-    getNewyorkWeather()
-    {
-      return {  condition : "SUNNY",
-	            temperature : {
-		             day : 32,
-		            night : 10
-	                 },
-	            wind : {
-		            speed : 0,
-		            direction : "NORTH"
-                    },
-                     
+  
+    
 
-        };
-
-    }
-
-    getJapanWeather(){
-
-       return{ condition : "CLOUDY",
-                temperature : {
-                     day : 22,
-                     night : 18
-                     },
-                    
-                     wind : {
-                        speed : 0,
-                        direction : "SOUTH"
-                     },
-                    
-                };
-               
-     }
-     displayedColumns!: ['day', 'morning', 'night'];
-
-}
+     getAllCityWeatherData() {
+       
+         return this.http.get<WeatherForecastInterface[]>(this.weatherforecastUrl)
+       
+      }//TODO get the data
+     
+   }

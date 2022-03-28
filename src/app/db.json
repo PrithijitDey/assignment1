@@ -1,9 +1,12 @@
 {
     "weatherforecast" : [
-    
+          {
+            "hi":"hello"
+          },
             {
+
                   "id":"london",
-                  "condition" : "SUNNY", 
+                  "condition" : "SUNNY",
                   "temperature" : {
                              "day" : 26,
                              "night" : 15
@@ -16,7 +19,7 @@
 
              {
                   "id":"newyork",
-                  "condition" : "RAINY", 
+                  "condition" : "RAINY",
                   "temperature" : {
                              "day" : 18,
                              "night" : 15
@@ -29,7 +32,7 @@
 
             {
                   "id":"japan",
-                  "condition" : "CLOUDY", 
+                  "condition" : "CLOUDY",
                   "temperature" : {
                              "day" : 23,
                              "night" : 18
@@ -41,8 +44,7 @@
             }
          ]
 }
-    
-            
-         
-         
-    
+
+
+
+

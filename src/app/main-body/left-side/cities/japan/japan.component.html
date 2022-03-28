@@ -1,27 +1,29 @@
 <div class="japan">             <!--heading i.e the city name-->
     <h3> Japan</h3>
 </div>
-     
+
 
 
 <div class="update">               <!--the weather report-->
     <ul>
-        <h3> {{ date | date }}</h3>
-        <h4 class="one"> CONDITION:   {{forecastdata.condition}}</h4> 
-      
-            
-        <h4> Temperature:-   </h4>  
-        
-        <p class="three"> Day:-       {{forecastdata.temperature.day}}*C  </p>  
-        <p class="two">  "           {{forecastdata.temperature.day | demo}}   </p> 
-        <p class="four"> Night:       {{forecastdata.temperature.night}}*C </p> 
-        <p class="two">  "           {{forecastdata.temperature.night | demo}}   </p>
-        <br>           
-        <h4>WIND</h4> 
-        <p class="two"> Speed:  {{forecastdata.wind.speed}}</p>
-            <p class="three">Direction:-  {{forecastdata.wind.direction}}</p>
 
-    <br>
+
+        <h3> {{ date |date }}</h3>
+        <h4 class="one"> CONDITION:     {{forecastdata[3].condition|json}} </h4>
+
+
+        <h4> Temperature:-   </h4>
+
+        <p class="three"> Day:-       {{forecastdata[3].temperature.day|json }}*C   </p>
+        <p class="two">  "           {{forecastdata[3].temperature.day | demo}}   </p>
+        <p class="four"> Night:       {{forecastdata[3].temperature.night}}*C </p>
+        <p class="two">  "           {{forecastdata[3].temperature.night | demo}}   </p>
+        <br>
+        <h4>WIND</h4>
+        <p class="two"> Speed:  {{forecastdata[3].wind.speed}}</p>
+            <p class="one">Direction:-  {{forecastdata[3].wind.direction}}</p>
+
+              <br>
 
     <li class="box" ><br><a routerLink="../Weekly-Japan" routerLinkActive="active" >WEATHER THIS WEEK</a></li>
     </ul>
@@ -29,5 +31,6 @@
 
 
 
-   
-    
+
+
+

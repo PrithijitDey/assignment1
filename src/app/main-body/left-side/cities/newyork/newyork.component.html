@@ -3,24 +3,23 @@
 
     <div class="update">          <!--the weather report-->
         <ul>
-          <h3> {{ date | date }}</h3>
-          <h4 class="one"> CONDITION:   {{forecastdata.condition}}</h4> 
-      
-            
-          <h4> Temperature:-   </h4>  
-          
-          <p class="four"> Day:-       {{forecastdata.temperature.day}}*C  </p>               
-          <p class="two">  "           {{forecastdata.temperature.day | demo}}   </p>
-          <p class="four"> Night:       {{forecastdata.temperature.night}}*C </p> 
-          <p class="two">  "           {{forecastdata.temperature.night | demo}}   </p>
-          <br>           
-          <h4>WIND</h4> 
-          <p class="two"> Speed:  {{forecastdata.wind.speed}}</p>
-              <p class="three">Direction:-  {{forecastdata.wind.direction}}</p>
-              
-                <br>
+          <h3> {{ date |date }}</h3>
+        <h4 class="one"> CONDITION:     {{forecastdata[2].condition|json}} </h4>
+
+
+        <h4> Temperature:-   </h4>
+
+        <p class="three"> Day:-       {{forecastdata[2].temperature.day|json }}*C   </p>
+        <p class="two">  "           {{forecastdata[2].temperature.day | demo}}   </p>
+        <p class="four"> Night:       {{forecastdata[2].temperature.night}}*C </p>
+        <p class="two">  "           {{forecastdata[2].temperature.night | demo}}   </p>
+        <br>
+        <h4>WIND</h4>
+        <p class="two"> Speed:  {{forecastdata[2].wind.speed}}</p>
+            <p class="one">Direction:-  {{forecastdata[2].wind.direction}}</p>
+
+              <br>
                 <li class="box" ><br><a routerLink="../Weekly-Newyork" routerLinkActive="active" >WEATHER THIS WEEK</a></li>
                  </ul>
     </div>
 
-  

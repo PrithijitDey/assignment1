@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
 import { WeatherInfoService } from 'src/app/cityInfoService';
 import { DemoPipe } from '../../../../file.pipe';
 @Component({
@@ -9,14 +11,32 @@ import { DemoPipe } from '../../../../file.pipe';
 export class LondonComponent implements OnInit {
   date = new Date();
   forecastdata:any;
-  constructor(private service: WeatherInfoService) {
-    this.service = service;
+  respo:any;
+  constructor(private service: WeatherInfoService ) {
+    this.service = service
+
+
 
    }
   ngOnInit(): void {
-    this.forecastdata = this.service.getLondonWeather();
-    
+    this.service.getAllCityWeatherData().subscribe(
+      (response:any) => {
+        console.log('response received')
+       this.service = response;
+       this.forecastdata = response;
+      },
+    )
+
+
 
   }
 
 }
+
+
+
+
+
+
+
+

@@ -9,16 +9,23 @@ import { DemoPipe } from '../../../../file.pipe';
 export class NewyorkComponent implements OnInit {
   date = new Date();
   forecastdata:any;
-  constructor(private service: WeatherInfoService) {
-    this.service = service;
+  respo:any;
+  constructor(private service: WeatherInfoService ) {
+    this.service = service
+
+
 
    }
-
-
-  
-
   ngOnInit(): void {
-    this.forecastdata = this.service.getNewyorkWeather();
-  }
+    this.service.getAllCityWeatherData().subscribe(
+      (response:any) => {
+        console.log('response received')
+       this.service = response;
+       this.forecastdata = response;
+      },
+    )
 
+
+
+  }
 }

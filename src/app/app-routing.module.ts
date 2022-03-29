@@ -8,13 +8,16 @@ import { JapanWeeklyForecastComponent } from './main-body/left-side/cities/japan
 import { LondonWeeklyForecastComponent } from './main-body/left-side/cities/london/london-weekly-forecast/london-weekly-forecast.component';
 import { NewyorkWeeklyForecastComponent } from './main-body/left-side/cities/newyork/newyork-weekly-forecast/newyork-weekly-forecast.component';
 
+
 const routes: Routes = [
+
   { path: 'City-Newyork', component: NewyorkComponent  },
   { path: 'City-London', component: LondonComponent },
   { path: 'City-Japan', component: JapanComponent },
   { path: 'Weekly-Newyork', component: NewyorkWeeklyForecastComponent },
   { path: 'Weekly-London', component: LondonWeeklyForecastComponent },
   { path: 'Weekly-Japan', component: JapanWeeklyForecastComponent }
+
 ];
 
 @NgModule({

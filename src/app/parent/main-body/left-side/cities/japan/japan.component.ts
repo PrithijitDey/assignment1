@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherInfoService } from 'src/app/cityInfoService';
-import { DemoPipe } from '../../../../file.pipe';
+import { DemoPipe } from '../../../../../file.pipe';
 @Component({
   selector: 'app-japan',
   templateUrl: './japan.component.html',

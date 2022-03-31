@@ -22,6 +22,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { ParentComponent } from './parent/parent.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,8 @@ import { ParentComponent } from './parent/parent.component';
     MatTableModule,
     MatSortModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
 
   ],

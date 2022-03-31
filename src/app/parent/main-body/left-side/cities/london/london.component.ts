@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { WeatherInfoService } from 'src/app/cityInfoService';
-import { DemoPipe } from '../../../../file.pipe';
+import { DemoPipe } from '../../../../../file.pipe';
 @Component({
   selector: 'app-london',
   templateUrl: './london.component.html',

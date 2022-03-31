@@ -1,8 +1,10 @@
 {
+  "logincredentials":[{
+    "adminuser":"admin",
+    "password":"12345"
+  }],
     "weatherforecast" : [
-          {
-            "hi":"hello"
-          },
+            {"hi":"hello"},
             {
 
                   "id":"london",

@@ -7,7 +7,8 @@ import { Observable } from 'rxjs/internal/Observable';
 
  export interface WeatherForecastInterface
  {
-   hi:string;
+   adminuser:string;
+   password:number;
    id:string;
    condition : string;
    temperature : any;
@@ -29,10 +30,13 @@ import { Observable } from 'rxjs/internal/Observable';
 export class  WeatherInfoService {
 
     weatherforecastUrl = 'http://localhost:3000/weatherforecast';
+    credentialsUrl = 'http://localhost:3000/logincredentials';
    subscribe: any;
     constructor(private http:HttpClient) { }
 
-
+    getCredentials():Observable<any>{
+      return this.http.get<WeatherForecastInterface[]>(this.credentialsUrl)
+    }
 
 
      getAllCityWeatherData(): Observable<any>  {

@@ -12,17 +12,20 @@ import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  {path:  'Parent', component:ParentComponent,
-  children:[
-  { path: 'City-Newyork', component: NewyorkComponent  },
-  { path: 'City-London', component: LondonComponent },
-  { path: 'City-Japan', component: JapanComponent },
-  { path: 'Weekly-Newyork', component: NewyorkWeeklyForecastComponent },
-  { path: 'Weekly-London', component: LondonWeeklyForecastComponent },
-  { path: 'Weekly-Japan', component: JapanWeeklyForecastComponent },
-  ]},
-  {path:'Login', component:LoginComponent}
-
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'parent', component: ParentComponent,
+    children: [
+      { path: 'city-Newyork', component: NewyorkComponent },
+      { path: 'city-London', component: LondonComponent },
+      { path: 'city-Japan', component: JapanComponent },
+      { path: 'weekly-Newyork', component: NewyorkWeeklyForecastComponent },
+      { path: 'weekly-London', component: LondonWeeklyForecastComponent },
+      { path: 'weekly-Japan', component: JapanWeeklyForecastComponent },
+      { path: '', redirectTo: 'city-Newyork', pathMatch: 'full' }
+    ]
+  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({

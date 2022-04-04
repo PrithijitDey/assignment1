@@ -7,23 +7,14 @@
   
 color: #91d2f0}
 
+  
+.left-side {
   .cities-list {
-    position:absolute;
-    resize: both;
-    width: 13.1%;
     height: 92.5%;
-    padding: 0;
-    top: -30px;
-    right: 0px;
-    left: 0px;
-    list-style-type:upper-latin;
+    padding-left: 0px;
     border-bottom: 0px solid #3b2727;
     border-right: 2px solid #91d2f0;
-    
-    
-    
-    
-
+    list-style: none;
     &__item {
       display: flex;
       justify-content: flex-start;
@@ -41,3 +32,4 @@ color: #91d2f0}
       }
     }
   }
+}

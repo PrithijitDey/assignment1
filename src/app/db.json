@@ -1,52 +1,52 @@
 {
-  "logincredentials":[{
-    "adminuser":"admin",
-    "password":"12345"
-  }],
-    "weatherforecast" : [
-            {"hi":"hello"},
-            {
-
-                  "id":"london",
-                  "condition" : "SUNNY",
-                  "temperature" : {
-                             "day" : 26,
-                             "night" : 15
-                                    },
-                   "wind" : {
-                             "speed" : 1,
-                             "direction" : "SOUTH"
-                             }
-             },
-
-             {
-                  "id":"newyork",
-                  "condition" : "RAINY",
-                  "temperature" : {
-                             "day" : 18,
-                             "night" : 15
-                                    },
-                   "wind" : {
-                             "speed" : 2,
-                             "direction" : "NORTH"
-                            }
-             },
-
-            {
-                  "id":"japan",
-                  "condition" : "CLOUDY",
-                  "temperature" : {
-                             "day" : 23,
-                             "night" : 18
-                                    },
-                   "wind" : {
-                             "speed" : 3,
-                             "direction" : "SOUTH"
-                            }
-            }
-         ]
+  "logincredentials": {
+    "adminuser": "admin",
+    "password": "admin"
+  },
+  "weatherforecast": [
+    {
+      "hi": "hello"
+    },
+    {
+      "id": "london",
+      "condition": "SUNNY",
+      "temperature": {
+        "day": 26,
+        "night": 15
+      },
+      "wind": {
+        "speed": 1,
+        "direction": "SOUTH"
+      }
+    },
+    {
+      "id": "newyork",
+      "condition": "RAINY",
+      "temperature": {
+        "day": 18,
+        "night": 15
+      },
+      "wind": {
+        "speed": 2,
+        "direction": "NORTH"
+      }
+    },
+    {
+      "id": "japan",
+      "condition": "CLOUDY",
+      "temperature": {
+        "day": 23,
+        "night": 18
+      },
+      "wind": {
+        "speed": 3,
+        "direction": "SOUTH"
+      }
+    }
+  ],
+  "cities": [
+    "london",
+    "newyork",
+    "japan"
+  ]
 }
-
-
-
-

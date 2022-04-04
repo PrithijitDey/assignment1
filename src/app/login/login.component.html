@@ -1,23 +1,18 @@
 <div class="login-credentials">
-
-<h4> LOGIN FOR WEATHER FORECASTS</h4>
-<form class="login " #loginForm="ngForm">
-<br>
-USERNAME :
-<input type="text" name="username" [(ngModel)]="username">
-<br>
-<br>
-PASSWORD :
-<input type="password" name="password" [(ngModel)]="password">
-<br>
-<br>
-<input type = "submit" name="submit" id="submit" (click)="getCred(username,password)" >
-</form>
-<ng-template #elseBlock> </ng-template>
-<app-parent *ngIf='check; else elseBlock'></app-parent>
-
-
-
+    <h4> LOGIN FOR WEATHER FORECASTS</h4>
+    <form class="login " #loginForm="ngForm">
+        <br>
+        USERNAME :
+        <input type="text" name="username" [(ngModel)]="username">
+        <br>
+        <br>
+        PASSWORD :
+        <input type="password" name="password" [(ngModel)]="password">
+        <br>
+        <br>
+        <input type="submit" name="submit" id="submit" (click)="doLogin(username,password)">
+    </form>
+    <ng-template #elseBlock> </ng-template>
 </div>
 
 <!--if username and password match then got to <app-parent></app-parent>  -->

@@ -1,16 +1,15 @@
 
 
 
-<div class="page-body">
+<div class="left-side">
 
     <ul class="cities-list">
-      <li class="cities-list__item">
-        <li class="box"><br><a routerLink="../Parent/City-Newyork" routerLinkActive="active">NEW YORK</a></li>
-
+        <li class="box" *ngFor="let city of cities; index as i;"><a routerLink="'../parent/' + city " routerLinkActive="active">{{city}}</a></li>
+<!-- 
         <br>
-        <li class="box" ><br><a routerLink="../Parent/City-London" routerLinkActive="active">LONDON</a></li>
+        <li class="box" ><a routerLink="../Parent/City-London" routerLinkActive="active">LONDON</a></li>
        <br>
-       <li class="box" ><br><a routerLink="../Parent/City-Japan" routerLinkActive="active" >JAPAN</a></li>
+       <li class="box" ><a routerLink="../Parent/City-Japan" routerLinkActive="active" >JAPAN</a></li> -->
 
     </ul>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherInfoService } from 'src/app/cityInfoService';
+import { CommonServices } from 'src/app/common.services';
 import { DemoPipe } from '../../../../../file.pipe';
 @Component({
   selector: 'app-japan',
@@ -10,7 +10,7 @@ export class JapanComponent implements OnInit {
   date = new Date();
   forecastdata:any;
   respo:any;
-  constructor(private service: WeatherInfoService ) {
+  constructor(private service: CommonServices ) {
     this.service = service
 
 

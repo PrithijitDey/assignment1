@@ -4,8 +4,8 @@
 <div class="left-side">
 
     <ul class="cities-list">
-        <li class="box" *ngFor="let city of cities; index as i;"><a routerLink="'../parent/' + city " routerLinkActive="active">{{city}}</a></li>
-<!-- 
+        <li class="box" *ngFor="let city of cities; index as i;"><a routerLink="'/city-' + {{city}} " routerLinkActive="active">{{city}}</a></li>
+<!--
         <br>
         <li class="box" ><a routerLink="../Parent/City-London" routerLinkActive="active">LONDON</a></li>
        <br>

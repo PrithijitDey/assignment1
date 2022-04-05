@@ -16,13 +16,13 @@ const routes: Routes = [
   {
     path: 'parent', component: ParentComponent,
     children: [
-      { path: 'city-Newyork', component: NewyorkComponent },
-      { path: 'city-London', component: LondonComponent },
-      { path: 'city-Japan', component: JapanComponent },
+      { path: 'city-newyork', component: NewyorkComponent },
+      { path: 'city-london', component: LondonComponent },
+      { path: 'city-japan', component: JapanComponent },
       { path: 'weekly-Newyork', component: NewyorkWeeklyForecastComponent },
       { path: 'weekly-London', component: LondonWeeklyForecastComponent },
       { path: 'weekly-Japan', component: JapanWeeklyForecastComponent },
-      { path: '', redirectTo: 'city-Newyork', pathMatch: 'full' }
+      { path: '', redirectTo: 'city-newyork', pathMatch: 'full' }
     ]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' }

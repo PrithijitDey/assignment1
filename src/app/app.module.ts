@@ -9,9 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazycompsModule } from './lazycomps/lazycomps.module';
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,12 @@ import { LazycompsModule } from './lazycomps/lazycomps.module';
 
 
   ],
+
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+],
   imports: [
+    NgxSpinnerModule,
     MaterialModule,
     BrowserModule,
     AppRoutingModule,

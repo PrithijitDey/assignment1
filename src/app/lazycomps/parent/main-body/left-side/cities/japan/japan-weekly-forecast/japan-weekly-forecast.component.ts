@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DataSource } from '@angular/cdk/table';
-import {MatTableModule, MatTableDataSource} from '@angular/material/table';
 @Component({
   selector: 'app-japan-weekly-forecast',
   templateUrl: './japan-weekly-forecast.component.html',

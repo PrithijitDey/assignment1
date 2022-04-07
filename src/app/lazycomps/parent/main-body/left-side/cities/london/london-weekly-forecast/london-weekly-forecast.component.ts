@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTableModule, MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-london-weekly-forecast',

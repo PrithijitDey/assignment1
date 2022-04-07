@@ -1,20 +1,26 @@
 <div class="login-credentials">
     <h4> LOGIN FOR WEATHER FORECASTS</h4>
     <form class="login " #loginForm="ngForm">
+        <br><div class="example-container">
+        <mat-form-field hintLabel="ENTER USERNAME" appearance="fill">
+
+          <input matInput placeholder="USERNAME" type="text" name="username" [(ngModel)]="username">
+
+        </mat-form-field>
+      </div>
+        <div class="example-container">
+          <mat-form-field hintLabel="ENTER PASSWORD" appearance="fill">
+          <input matInput  placeholder="PASSWORD" type="password" name="password" [(ngModel)]="password">
+          </mat-form-field>
+        </div>
         <br>
-        USERNAME :
-        <input type="text" name="username" [(ngModel)]="username">
         <br>
-        <br>
-        PASSWORD :
-        <input type="password" name="password" [(ngModel)]="password">
-        <br>
-        <br>
-        <input type="submit" name="submit" id="submit" (click)="doLogin(username,password)">
+
+        <button mat-raised-button color="blue" type="submit" name="submit" id="submit" (click)="doLogin(username,password)">SUBMIT</button>
     </form>
     <ng-template #elseBlock> </ng-template>
 </div>
-<button mat-raised-button color="accent">accent</button>
+
 <!--<mat-button-toggle [aria-label]="alertsEnabled ? 'Disable alerts' : 'Enable alerts'">
   <mat-icon>notifications</mat-icon>
 </mat-button-toggle>-->

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../auth.guard';
 
 
 import { JapanWeeklyForecastComponent } from './parent/main-body/left-side/cities/japan/japan-weekly-forecast/japan-weekly-forecast.component';
@@ -12,7 +13,7 @@ import { ParentComponent } from './parent/parent.component';
 const routes: Routes = [
 
   {
-    path: 'parent', component: ParentComponent,
+    path: 'parent', component: ParentComponent,canActivate:[AuthGuard],
     children: [
       { path: 'city-Newyork', component: NewyorkComponent },
       { path: 'city-London', component: LondonComponent },

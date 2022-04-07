@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
   username: any;
   password: any;
   credentials:any;
+  static checks: any;
+
   constructor(private service: CommonServices, private router: Router) {
     this.service = service}
 
@@ -30,6 +32,7 @@ export class LoginComponent implements OnInit {
     console.log ("admin password :: " + this.credentials.password);
     if (user == this.credentials.adminuser && pass == this.credentials.password) {
       this.router.navigate(['parent/city-Newyork']);
+      LoginComponent.checks = true;
     } else {
       console.log('wrong credentials');
     }

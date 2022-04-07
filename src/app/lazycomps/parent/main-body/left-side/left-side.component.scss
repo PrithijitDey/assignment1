@@ -1,35 +1,33 @@
 
-  
+
   .box {outline-style: solid;
     outline-width: 0.5px;
   height: 71px;
   width: 200.5px;
-  
+
 color: #91d2f0}
 
-  
+
 .left-side {
+
   .cities-list {
+    left: 10px;
     height: 92.5%;
-    padding-left: 0px;
+    padding-left: 1px;
     border-bottom: 0px solid #3b2727;
     border-right: 2px solid #91d2f0;
     list-style: none;
-    &__item {
-      display: flex;
-      justify-content: flex-start;
-      align-items: left;
-      font-size: 32px;
-      color: #ffffff;
-      width: 5%;
-      min-height: 30px;
-      
+    text-align: center;
+    border-right: 2px;
+    border-color: #91d2f0;
+
+
       transition: color .1s ease-out;
       cursor:crosshair;
-   
+
       &:hover {
         color: #c50cf3;
       }
     }
   }
-}
+

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServices } from 'src/app/common.services';
-import { DemoPipe } from '../../../../../file.pipe';
+import { DemoPipe } from 'src/app/file.pipe';
 @Component({
   selector: 'app-japan',
   templateUrl: './japan.component.html',

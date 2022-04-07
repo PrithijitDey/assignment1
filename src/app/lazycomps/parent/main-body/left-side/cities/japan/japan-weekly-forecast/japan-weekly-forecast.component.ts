@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataSource } from '@angular/cdk/table';
+import {MatTableModule, MatTableDataSource} from '@angular/material/table';
 @Component({
-  selector: 'app-newyork-weekly-forecast',
-  templateUrl: './newyork-weekly-forecast.component.html',
-  styleUrls: ['./newyork-weekly-forecast.component.scss']
+  selector: 'app-japan-weekly-forecast',
+  templateUrl: './japan-weekly-forecast.component.html',
+  styleUrls: ['./japan-weekly-forecast.component.scss']
 })
-export class NewyorkWeeklyForecastComponent implements OnInit {
-
+export class JapanWeeklyForecastComponent implements OnInit{
 
   dailyTable = [
 
-    { day: 'MON', morning: 3, night: 13, },
+    { day: 'MON', morning: 1, night: 11, },
     { day: 'TUE', morning: 2, night: 12, },
     { day: 'WED', morning: 3, night: 13, },
     { day: 'THU', morning: 4, night: 14, },
@@ -20,9 +21,16 @@ export class NewyorkWeeklyForecastComponent implements OnInit {
 
   ];
   columnsToDisplay=['day','morning', 'night'];
-  constructor() { }
+  constructor() {
+
+
+   }
 
   ngOnInit(): void {
+
+
   }
+
+
 
 }

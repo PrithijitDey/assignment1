@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     console.log ("admin username :: " + this.credentials.adminuser);
     console.log ("admin password :: " + this.credentials.password);
     if (user == this.credentials.adminuser && pass == this.credentials.password) {
-      this.router.navigate(['parent/city-newyork']);
+      this.router.navigate(['parent/city-Newyork']);
     } else {
       console.log('wrong credentials');
     }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { CommonServices } from 'src/app/common.services';
-import { DemoPipe } from '../../../../../file.pipe';
+import { DemoPipe } from 'src/app/file.pipe';
 @Component({
   selector: 'app-london',
   templateUrl: './london.component.html',

@@ -1,31 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { JapanComponent } from './parent/main-body/left-side/cities/japan/japan.component';
-import { LondonComponent } from './parent/main-body/left-side/cities/london/london.component';
-import { NewyorkComponent } from './parent/main-body/left-side/cities/newyork/newyork.component';
-import { JapanWeeklyForecastComponent } from './parent/main-body/left-side/cities/japan/japan-weekly-forecast/japan-weekly-forecast.component';
-import { LondonWeeklyForecastComponent } from './parent/main-body/left-side/cities/london/london-weekly-forecast/london-weekly-forecast.component';
-import { NewyorkWeeklyForecastComponent } from './parent/main-body/left-side/cities/newyork/newyork-weekly-forecast/newyork-weekly-forecast.component';
-import { ParentComponent } from './parent/parent.component';
+import { JapanComponent } from './lazycomps/parent/main-body/left-side/cities/japan/japan.component';
+import { LondonComponent } from './lazycomps/parent/main-body/left-side/cities/london/london.component';
+import { NewyorkComponent } from './lazycomps/parent/main-body/left-side/cities/newyork/newyork.component';
+import { JapanWeeklyForecastComponent } from './lazycomps/parent/main-body/left-side/cities/japan/japan-weekly-forecast/japan-weekly-forecast.component';
+import { LondonWeeklyForecastComponent } from './lazycomps/parent/main-body/left-side/cities/london/london-weekly-forecast/london-weekly-forecast.component';
+import { NewyorkWeeklyForecastComponent } from './lazycomps/parent/main-body/left-side/cities/newyork/newyork-weekly-forecast/newyork-weekly-forecast.component';
+import { ParentComponent } from './lazycomps/parent/parent.component';
 import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  {
-    path: 'parent', component: ParentComponent,
-    children: [
-      { path: 'city-newyork', component: NewyorkComponent },
-      { path: 'city-london', component: LondonComponent },
-      { path: 'city-japan', component: JapanComponent },
-      { path: 'weekly-Newyork', component: NewyorkWeeklyForecastComponent },
-      { path: 'weekly-London', component: LondonWeeklyForecastComponent },
-      { path: 'weekly-Japan', component: JapanWeeklyForecastComponent },
-      { path: '', redirectTo: 'city-newyork', pathMatch: 'full' }
-    ]
-  },
-  { path: '', redirectTo: 'login', pathMatch: 'full' }
+  { path: "admin",loadChildren:()=> import('./lazycomps/lazycomps.module')
+  .then(mod=>mod.LazycompsModule)
+},
+
 ];
 
 @NgModule({

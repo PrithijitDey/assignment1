@@ -5,7 +5,9 @@
   position: center;
   color: #0e0202;
 }
-
+h3{
+  text-align: center;
+}
 .one {
   word-spacing: 520px;
 }
@@ -23,12 +25,15 @@
 }
 
 .box {
+  color: #ffffff;
   outline-style: solid;
   outline-width: 0.5px;
   height: 60px;
   width: 220px;
   list-style-type: none;
   text-align: center;
+  background-color: #76c1df;
+
 }
 
 .update {

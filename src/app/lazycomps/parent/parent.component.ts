@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -7,15 +8,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ParentComponent implements OnInit {
 
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.spinner.show();
-
-    setTimeout(() => {
-
-      this.spinner.hide();
-    }, 5000);
-  }
+  ngOnInit(): void { }
 
 }

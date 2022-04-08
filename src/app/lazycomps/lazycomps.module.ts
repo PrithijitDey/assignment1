@@ -15,6 +15,7 @@ import { LazycompsRoutingModule } from './lazycomps-routing.module';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { DemoPipe } from 'src/app/file.pipe';
+import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -29,17 +30,16 @@ import { DemoPipe } from 'src/app/file.pipe';
     NewyorkWeeklyForecastComponent,
     LondonWeeklyForecastComponent,
     ParentComponent,
-    DemoPipe,
-
+    DemoPipe
   ],
   imports: [
+    NgxSpinnerModule,
     CommonModule,
     LazycompsRoutingModule,
     MatTableModule,
     MatSortModule,
-    MatTableModule,
-
-
-  ]
+    MatTableModule
+  ],
+  providers: [NgxSpinnerService]
 })
 export class LazycompsModule { }

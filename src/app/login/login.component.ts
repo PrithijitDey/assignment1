@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonServices } from 'src/app/common.services';
+import { AuthGuardService } from '../auth-guard/auth-guard.service';
+import { FormBuilder } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -8,34 +11,31 @@ import { CommonServices } from 'src/app/common.services';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  check = false;
-  username: any;
-  password: any;
-  credentials:any;
-  static checks: any;
 
-  constructor(private service: CommonServices, private router: Router) {
-    this.service = service}
+  loginForm = this.formBuilder.group({
+    userName: '',
+    password: ''
+  });
 
-  ngOnInit(): void {
-    this.service.getCredentials().subscribe(
-      (response:any) => {
-        console.log('credentials received')
-       this.service = response;
-       this.credentials = response;})
+  constructor(private commonService: CommonServices,
+    private router: Router,
+    private authService: AuthGuardService,
+    private formBuilder: FormBuilder,
+    private spinner: NgxSpinnerService) { }
 
+  ngOnInit(): void { }
 
-  }
-
-  doLogin(user: string, pass: any) {
-    console.log ("admin username :: " + this.credentials.adminuser);
-    console.log ("admin password :: " + this.credentials.password);
-    if (user == this.credentials.adminuser && pass == this.credentials.password) {
-      this.router.navigate(['parent/city-Newyork']);
-      LoginComponent.checks = true;
-    } else {
-      console.log('wrong credentials');
-    }
+  doLogin(loginFormData: any) {
+    this.spinner.show();
+    this.commonService.getCredentials().subscribe((response: any) => {
+      this.spinner.hide();
+      if (loginFormData.userName == response.adminuser && loginFormData.password == response.password) {
+        this.authService.setIsLoggedIn(true);
+        this.router.navigate(['parent/city-Newyork']);
+      } else {
+        console.log('wrong credentials');
+      }
+    })
   }
 
 }

@@ -13,6 +13,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazycompsModule } from './lazycomps/lazycomps.module';
 import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,8 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
     FormsModule,
     ReactiveFormsModule,
     LazycompsModule,
+
+
 
 
   ],

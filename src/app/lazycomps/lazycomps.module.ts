@@ -16,6 +16,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { DemoPipe } from 'src/app/file.pipe';
 import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
     NewyorkWeeklyForecastComponent,
     LondonWeeklyForecastComponent,
     ParentComponent,
-    DemoPipe
+    DemoPipe,
+
   ],
   imports: [
     NgxSpinnerModule,
@@ -38,7 +40,9 @@ import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
     LazycompsRoutingModule,
     MatTableModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    AgGridModule.withComponents(null),
+
   ],
   providers: [NgxSpinnerService]
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-london-weekly-forecast',
@@ -7,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LondonWeeklyForecastComponent implements OnInit {
 
+  columnDefs: ColDef[] = [
+    { field: 'day' },
+    { field: 'morning' },
+    { field: 'night'}
+  ];
   dailyTable = [
 
     { day: 'MON', morning: 2, night: 12, },

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CommonServices } from 'src/app/common.services';
 
@@ -12,6 +12,7 @@ export class LondonComponent implements OnInit {
   date = new Date();
   forecastdata: any;
   respo: any;
+  @Input() data = [];
   constructor(private service: CommonServices, private spinner: NgxSpinnerService) {
     this.service = service
   }

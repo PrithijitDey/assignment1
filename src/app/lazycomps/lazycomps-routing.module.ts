@@ -10,7 +10,7 @@ import { LondonComponent } from './parent/main-body/left-side/cities/london/lond
 import { NewyorkWeeklyForecastComponent } from './parent/main-body/left-side/cities/newyork/newyork-weekly-forecast/newyork-weekly-forecast.component';
 import { NewyorkComponent } from './parent/main-body/left-side/cities/newyork/newyork.component';
 import { ParentComponent } from './parent/parent.component';
-const routes: Routes = [
+const routes: Routes = [                                                                            //routes to components that are to be lazy loaded
 
   {
     path: 'parent', component: ParentComponent,canActivate:[AuthGuard],

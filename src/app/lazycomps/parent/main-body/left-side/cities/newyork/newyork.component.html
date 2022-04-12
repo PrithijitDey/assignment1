@@ -3,7 +3,7 @@
 
     <div class="update">          <!--the weather report-->
         <ul>
-          <h4> {{ date |date }}</h4>
+          <h4> {{ date |date }}</h4>                                                         <!--displays the date-->
         <h4 class="one"> CONDITION:     {{forecastdata[2].condition|json}} </h4>
 
 
@@ -19,7 +19,7 @@
             <p class="one">Direction:-  {{forecastdata[2].wind.direction}}</p>
 
               <br>
-                <li class="box" ><br><a routerLink="../weekly-Newyork" routerLinkActive="active" >WEATHER THIS WEEK</a></li>
+                <li class="box" ><br><a routerLink="../weekly-Newyork" routerLinkActive="active" >WEATHER THIS WEEK</a></li>       <!--the link to the weekly weather report-->
                  </ul>
     </div>
 

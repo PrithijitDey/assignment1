@@ -42,6 +42,7 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 
 
 
+
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

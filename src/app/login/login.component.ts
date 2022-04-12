@@ -25,15 +25,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  doLogin(loginFormData: any) {
+  doLogin(loginFormData: any) {                                                             //authenticating the login credentials
     this.spinner.show();
-    this.commonService.getCredentials().subscribe((response: any) => {
+    this.commonService.getCredentials().subscribe((response: any) => {                      // fetching the credentials from the database to check
       this.spinner.hide();
-      if (loginFormData.userName == response.adminuser && loginFormData.password == response.password) {
+      if (loginFormData.userName == response.adminuser && loginFormData.password == response.password) {              //checks if the entered credentials match
         this.authService.setIsLoggedIn(true);
-        this.router.navigate(['parent/city-Newyork']);
-      } else {
-        console.log('wrong credentials');
+        this.router.navigate(['parent/city-Newyork']);                                     // if credentials match then user is lead to this component
+      } else {                                                                             // if credentials do not match then is lead back -
+        console.log('wrong credentials');                                                   // - to login page with the statement printed in the console
       }
     })
   }

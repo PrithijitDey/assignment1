@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonServices } from 'src/app/common.services';
 import { DemoPipe } from 'src/app/file.pipe';
 
@@ -11,7 +11,7 @@ export class NewyorkComponent implements OnInit {
   date = new Date();
   forecastdata:any;
   respo:any;
-
+  @Input() data = [];
   constructor(private service: CommonServices ) {
     this.service = service
 

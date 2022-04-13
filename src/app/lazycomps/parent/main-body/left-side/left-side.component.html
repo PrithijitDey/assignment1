@@ -1,17 +1,8 @@
-
-
-
 <div class="left-side">
 
-    <ul class="cities-list">                         <!--the list of cities fetched from the database-->
-        <li class="box" *ngFor="let city of cities; index as i;"><br><a routerLink="./city-{{city}}" routerLinkActive="active" [state]="forecastdata">{{city}}</a></li>
-<!--
-        <br>
-        <li class="box" ><a routerLink="../Parent/City-London" routerLinkActive="active">LONDON</a></li>
-       <br>
-       <li class="box" ><a routerLink="../Parent/City-Japan" routerLinkActive="active" >JAPAN</a></li> -->
-
+    <ul class="cities-list">
+        <!--the list of cities fetched from the database-->
+        <li class="box" *ngFor="let city of cities; index as i;"><br><a routerLink="./city-{{city}}"
+                routerLinkActive="active" [state]="forecastdata">{{city}}</a></li>
     </ul>
 </div>
-
-

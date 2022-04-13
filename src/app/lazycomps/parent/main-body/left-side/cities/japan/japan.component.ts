@@ -18,18 +18,13 @@ export class JapanComponent implements OnInit {
   respo: any;
   sub: any;
 
-  constructor(private router:Router, private activatedRoute:ActivatedRoute) {
-    console.log(this.router.getCurrentNavigation().extras.state);
+  constructor(private router:Router) {
+    console.log(this.router.getCurrentNavigation()?.extras.state);
 
   }
 
   ngOnInit(): void {
-
     this.forecastdata = history.state;
-
-
       console.log(this.forecastdata );
-
-
   }
 }

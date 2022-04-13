@@ -10,13 +10,8 @@ import { CommonServices } from 'src/app/common.services';
 })
 export class CitiesComponent implements OnInit {
 
-  constructor() {
+  constructor() {}
 
-  }
-
-  ngOnInit(): void {
-
-
-  }
+  ngOnInit(): void {}
 
 }

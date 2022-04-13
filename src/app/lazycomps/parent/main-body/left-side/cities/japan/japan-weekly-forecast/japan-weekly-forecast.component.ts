@@ -24,16 +24,9 @@ export class JapanWeeklyForecastComponent implements OnInit{
 
   ];
   columnsToDisplay=['day','morning', 'night'];
-  constructor() {
 
+  constructor() {}
 
-   }
-
-  ngOnInit(): void {
-
-
-  }
-
-
+  ngOnInit(): void {}
 
 }

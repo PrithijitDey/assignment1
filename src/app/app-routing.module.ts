@@ -5,13 +5,11 @@ import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: "admin",loadChildren:()=> import('./lazycomps/lazycomps.module')
-  .then(mod=>mod.LazycompsModule),
-
-},
-
-];
+    { path: 'login', component: LoginComponent },
+    { path: "admin",loadChildren:()=> import('./lazycomps/lazycomps.module')
+      .then(mod=>mod.LazycompsModule),
+    },
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

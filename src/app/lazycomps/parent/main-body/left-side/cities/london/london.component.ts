@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { CommonServices } from 'src/app/common.services';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-london',
@@ -13,20 +13,16 @@ export class LondonComponent implements OnInit {
   forecastdata: any;
   respo: any;
   @Input() data = [];
-  constructor(private service: CommonServices, private spinner: NgxSpinnerService) {
-    this.service = service
+  constructor(private router:Router) {
+    console.log(this.router.getCurrentNavigation()?.extras.state);
   }
+
   ngOnInit(): void {
-    this.spinner.show();
-    this.service.getAllCityWeatherData().subscribe(
-      (response: any) => {
-        this.spinner.hide();
-        this.service = response;
-        this.forecastdata = response;
-      },
-    )
+    this.forecastdata = history.state;
+      console.log(this.forecastdata );
   }
 }
+
 
 
 

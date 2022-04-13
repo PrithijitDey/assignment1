@@ -27,8 +27,6 @@ export class LondonWeeklyForecastComponent implements OnInit {
   columnsToDisplay=['day','morning', 'night'];
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 }

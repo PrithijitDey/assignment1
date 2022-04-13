@@ -12,7 +12,7 @@ import { NewyorkWeeklyForecastComponent } from './parent/main-body/left-side/cit
 import { LondonWeeklyForecastComponent } from './parent/main-body/left-side/cities/london/london-weekly-forecast/london-weekly-forecast.component';
 import { ParentComponent } from './parent/parent.component';
 import { LazycompsRoutingModule } from './lazycomps-routing.module';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { DemoPipe } from 'src/app/file.pipe';
 import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
@@ -42,7 +42,6 @@ import { AgGridModule } from 'ag-grid-angular';
     MatSortModule,
     MatTableModule,
     AgGridModule.withComponents(null),
-
   ],
   providers: [NgxSpinnerService]
 })

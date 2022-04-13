@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommonServices } from 'src/app/common.services';
-import { DemoPipe } from 'src/app/file.pipe';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-newyork',
@@ -11,23 +11,13 @@ export class NewyorkComponent implements OnInit {
   date = new Date();
   forecastdata:any;
   respo:any;
-  @Input() data = [];
-  constructor(private service: CommonServices ) {
-    this.service = service
+  constructor(private router:Router) {
+    console.log(this.router.getCurrentNavigation()?.extras.state);
 
+  }
 
-
-   }
   ngOnInit(): void {
-    this.service.getAllCityWeatherData().subscribe(
-      (response:any) => {
-        console.log('response received')
-       this.service = response;
-       this.forecastdata = response;
-      },
-    )
-
-
-
+    this.forecastdata = history.state;
+      console.log(this.forecastdata );
   }
 }

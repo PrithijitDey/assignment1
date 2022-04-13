@@ -1,7 +1,5 @@
 
 import { Injectable } from '@angular/core';
-
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -18,17 +16,13 @@ export interface ICommonServices {
   direction: string;
 }
 
-
 @Injectable
   ({
     providedIn: 'root'
   })
 
-
-
 export class CommonServices {
   baseUrl = 'http://localhost:3000/';
-
   weatherforecastUrl = 'weatherforecast';
   credentialsUrl = 'logincredentials';
   citiesList = 'cities';

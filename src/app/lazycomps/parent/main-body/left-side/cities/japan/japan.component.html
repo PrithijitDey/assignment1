@@ -8,22 +8,21 @@
     <ul>
 
 
-        <h4> {{ date |date }}</h4>                                                       <!--displays the date-->
-       <h4 class="one"> CONDITION:     {{forecastdata[3].condition|json}} </h4>
+      <h4> {{ date |date }}</h4>                                                       <!--displays the date-->
+      <h4 class="one"> CONDITION:     {{forecastdata[index].condition|json}} </h4>
 
 
-        <h4> Temperature:-   </h4>
+      <h4> Temperature:-   </h4>
 
         <p class="three"> Day:-       {{forecastdata[3].temperature.day|json }}*C   </p>
-        <p class="two">  "           {{forecastdata[3].temperature.day | demo}}   </p>
+          <p class="two">  "          {{forecastdata[3].temperature.day | demo}}   </p>
         <p class="four"> Night:       {{forecastdata[3].temperature.night}}*C </p>
-        <p class="two">  "           {{forecastdata[3].temperature.night | demo}}   </p>
-        <br>
-        <h4>WIND</h4>
-        <p class="two"> Speed:  {{forecastdata[3].wind.speed}}</p>
-            <p class="one">Direction:-  {{forecastdata[3].wind.direction}}</p>
-
-              <br>
+          <p class="two">  "          {{forecastdata[3].temperature.night | demo}}   </p>
+      <br>
+      <h4>WIND</h4>
+      <p class="two"> Speed:          {{forecastdata[3].wind.speed}}</p>
+        <p class="one">Direction:-    {{forecastdata[3].wind.direction}}</p>
+         <br>
 
     <li class="box" ><br><a routerLink="../weekly-Japan" routerLinkActive="active" >WEATHER THIS WEEK</a></li>           <!--the link to the weekly weather report-->
     </ul>

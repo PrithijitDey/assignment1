@@ -20,14 +20,10 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
     HeaderComponent,
     FooterComponent,
     LoginComponent
-
-
-
   ],
 
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+
   imports: [
     NgxSpinnerModule,
     MaterialModule,
@@ -38,11 +34,6 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
     FormsModule,
     ReactiveFormsModule,
     LazycompsModule,
-
-
-
-
-
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -1,10 +1,6 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { CommonServices } from 'src/app/common.services';
-import { DemoPipe } from 'src/app/file.pipe';
-import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
-import {  Observable} from 'rxjs';
-import { map, filter} from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-japan',
   templateUrl: './japan.component.html',
@@ -17,7 +13,7 @@ export class JapanComponent implements OnInit {
   forecastdata: any;
   respo: any;
   sub: any;
-
+ index=3;
   constructor(private router:Router) {
     console.log(this.router.getCurrentNavigation()?.extras.state);
 
